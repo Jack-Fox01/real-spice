@@ -1,13 +1,5 @@
-Claude
-
-
-
-
-
-
-
-Readme · MD
 <div align="center">
+
 # 🌶️ Real Spice
  
 **A faster, friendlier website for Real Spice, an Indian takeaway in Leven, Fife.**
@@ -26,6 +18,7 @@ Plain HTML, CSS and JavaScript. No framework, no build step.
 [**🔍 Research**](docs/research.md)
  
 </div>
+
 > [!IMPORTANT]
 > **This is an unofficial concept**, built as a learning and portfolio project. It is not the restaurant's official site.
 > To order for real, visit **[realspiceleven.co.uk](https://www.realspiceleven.co.uk/)** or call **📞 01333 422533**.
@@ -44,6 +37,7 @@ Plain HTML, CSS and JavaScript. No framework, no build step.
 - [Project structure](#-project-structure)
 - [Workflow](#-workflow)
 - [Credits](#-credits)
+
 ---
  
 ## 🤔 The problem
@@ -70,6 +64,7 @@ The [current site](https://www.realspiceleven.co.uk/) works, but it's hard to us
 - [ ] 🔍 Search, plus vegetarian and spice-level filters
 - [ ] 🗺️ Clear delivery zones, allergy info, a map and directions
 - [ ] 💯 Lighthouse scores of **90+** for performance, accessibility, best practices and SEO
+
 Progress is tracked in the [**v1 launch milestone**](https://github.com/Jack-Fox01/real-spice/milestone/1).
  
 ---
@@ -147,22 +142,25 @@ flowchart LR
  
 <details>
 <summary><b>Step-by-step example</b></summary>
+
 1. Make a branch named after the issue:
 ```bash
    git switch -c 7-render-menu
 ```
 2. Build it in small, focused commits.
 3. Open a pull request with `Closes #7` in the description, get it reviewed, then merge.
+
 </details>
+
 ---
  
 ## 🙏 Credits
  
 - The menu, hours and contact details come from Real Spice's public website.
 - 📷 Photos will be credited here as they're added.
+
 <div align="center">
+
 <sub>Made with ☕ and 🍛 in Fife</sub>
  
 </div>
- 
-Claude finished the response
