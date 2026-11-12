@@ -5,6 +5,8 @@
 }
 
 :root {
+
+    /* COLOURS */
     --brand-primary: #b3261e;
     --brand-primary-dark: #8C1D17;
     --brand-accent: #F2A516;
@@ -19,6 +21,9 @@
     --status-hot-bg: #ffe9e6;
     --ui-disabled: #D8C9C0;
     --brand-deal: #6E1712;
+    
+    /* TYPEOGRAPHY */
+
     --font-heading: 'Rozha One', serif;
     --font-body: 'Poppins', sans-serif; /* this is the fallback incase google fonts breaks */
     --font-size-h1: 2rem;
@@ -29,4 +34,22 @@
     --font-size-tag: 0.75rem;
     --font-weight-regular: 400;
     --font-weight-bold: 600;
+
+    /* SPACING */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+
+    /* Shapes */
+    --radius-card: 1rem;
+    --radius-input: 0.75rem;
+    --radius-pill: 999px;
+    --card-shadow: 0 4px 16px rgba(51, 26, 13, 0.06);
+    --tap-target: 2.75rem;
+    --page-padding: (var(--space-4));
+    --max-width: 72rem;
 }
