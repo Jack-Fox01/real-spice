@@ -1,3 +1,22 @@
-body {
-    background-color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brand-primary: #b3261e;
+    --brand-primary-dark: #8C1D17;
+    --brand-accent: #F2A516;
+    --bg-cream: #fff8ee;
+    --bg-card: #FFFFFF;
+    --border: #F0E6DC;
+    --text-main: #2B1D16;
+    --text-muted: #7A6A60;
+    --text-on-brand: #FFFFFF;
+    --status-green: #2E7D32;
+    --status-green-bg: #E7F6E8;
+    --status-hot-bg: #ffe9e6;
+    --ui-disabled: #D8C9C0;
+    --brand-deal: #6E1712;
 }
