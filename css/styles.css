@@ -1,7 +1,37 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* removing the browasers deafult margins */
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+}
+
+/* images and videos wont spill out the container */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* form uses our font indtead of the deafult browser option */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* long words wrap instead of breaking out */
+p,
+h1,
+h2,
+h3 {
+    overflow-wrap: break-word;
 }
 
 :root {
@@ -69,7 +99,7 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
-h1{
+h1 {  
     font-size: var(--font-size-h1);
 }
 
