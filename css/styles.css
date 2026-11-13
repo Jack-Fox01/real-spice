@@ -1,3 +1,112 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* removing the browasers deafult margins */
+* {
+    margin: 0;
+}
+
+/* images and videos wont spill out the container */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* form uses our font indtead of the deafult browser option */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* long words wrap instead of breaking out */
+p,
+h1,
+h2,
+h3 {
+    overflow-wrap: break-word;
+}
+
+:root {
+
+    /* COLOURS */
+    --brand-primary: #b3261e;
+    --brand-primary-dark: #8C1D17;
+    --brand-accent: #F2A516;
+    --bg-cream: #fff8ee;
+    --bg-card: #FFFFFF;
+    --border: #F0E6DC;
+    --text-main: #2B1D16;
+    --text-muted: #7A6A60;
+    --text-on-brand: #FFFFFF;
+    --status-green: #2E7D32;
+    --status-green-bg: #E7F6E8;
+    --status-hot-bg: #ffe9e6;
+    --ui-disabled: #D8C9C0;
+    --brand-deal: #6E1712;
+    
+    /* TYPOGRAPHY */
+
+    --font-heading: 'Rozha One', serif;
+    --font-body: 'Poppins', sans-serif; /* this is the fallback incase google fonts breaks */
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.63rem;
+    --font-size-h3: 1.25rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.813rem;
+    --font-size-tag: 0.75rem;
+    --font-weight-regular: 400;
+    --font-weight-bold: 600;
+
+    /* SPACING */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+
+    /* Shapes */
+    --radius-card: 1rem;
+    --radius-input: 0.75rem;
+    --radius-pill: 999px;
+    --card-shadow: 0 4px 16px rgba(51, 26, 13, 0.06);
+    --tap-target: 2.75rem;
+    --page-padding: var(--space-4);
+    --max-width: 72rem;
+}
+
 body {
-    background-color: red;
+    background-color: var(--bg-cream);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h1 {  
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
 }
