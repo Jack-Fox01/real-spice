@@ -22,7 +22,7 @@
     --ui-disabled: #D8C9C0;
     --brand-deal: #6E1712;
     
-    /* TYPEOGRAPHY */
+    /* TYPOGRAPHY */
 
     --font-heading: 'Rozha One', serif;
     --font-body: 'Poppins', sans-serif; /* this is the fallback incase google fonts breaks */
@@ -50,6 +50,6 @@
     --radius-pill: 999px;
     --card-shadow: 0 4px 16px rgba(51, 26, 13, 0.06);
     --tap-target: 2.75rem;
-    --page-padding: (var(--space-4));
+    --page-padding: var(--space-4);
     --max-width: 72rem;
 }
