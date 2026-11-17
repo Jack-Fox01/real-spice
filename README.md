@@ -62,7 +62,7 @@ The [current site](https://www.realspiceleven.co.uk/) works, but it's hard to us
 - [ ] 🗂️ A menu built from one JSON file, so every price has a single source of truth
 - [ ] 📌 A sticky category bar that highlights where you are as you scroll
 - [ ] 🔍 Search, plus vegetarian and spice-level filters
-- [ ] 🗺️ Clear delivery zones, allergy info, a map and directions
+- [ ] 🗺️ Clear delivery info (one flat fee), allergy info, a map and directions
 - [ ] 💯 Lighthouse scores of **90+** for performance, accessibility, best practices and SEO
 
 Progress is tracked in the [**v1 launch milestone**](https://github.com/Jack-Fox01/real-spice/milestone/1).
