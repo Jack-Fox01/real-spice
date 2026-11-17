@@ -62,7 +62,7 @@ The [current site](https://www.realspiceleven.co.uk/) works, but it's hard to us
 - [ ] 🗂️ A menu built from one JSON file, so every price has a single source of truth
 - [ ] 📌 A sticky category bar that highlights where you are as you scroll
 - [ ] 🔍 Search, plus vegetarian and spice-level filters
-- [ ] 🗺️ Clear delivery zones, allergy info, a map and directions
+- [ ] 🗺️ Clear delivery info (one flat fee), allergy info, a map and directions
 - [ ] 💯 Lighthouse scores of **90+** for performance, accessibility, best practices and SEO
 - [ ] 🧺 A **demo** basket and checkout from the Figma designs (no real orders or payments)
 
