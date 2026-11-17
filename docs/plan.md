@@ -1,42 +1,54 @@
 # Rebuild plan: Real Spice v1
 
-**Deadline:** Wednesday 18 November 2026 (one week from 11 November).
+**Launch:** Friday 29 January 2027. Started 11 November 2026, working a few sittings a week.
 **Stack:** HTML, CSS and vanilla JavaScript. No framework, no build step.
-**Hosting:** GitHub Pages (free, deploys on every push).
+**Hosting:** GitHub Pages (free, deploys on every push to `main`).
+
+> **What changed:** the first plan was a one-week sprint to 18 November 2026. Once we started,
+> the Figma designs turned out to be more detailed than the original issues, so the work was
+> split into smaller issues and grouped into milestones that act as sprints. `menu.html` was
+> dropped: the menu now lives on the home page.
 
 ## Scope
 
-**In v1:** a fast, mobile-first site with a home page, a searchable and filterable menu built
-from one JSON file, an "Open now" badge, clear delivery and allergy info, contact with a map,
-and ordering handed off to the restaurant's existing ordering system or a phone call.
+**In v1:** a fast, mobile-first menu home page with search and filters, built from one JSON file;
+an "Open now" badge; a contact page with find us, hours, delivery, allergy info and about; and
+real ordering handed off to the restaurant's existing ordering system or a phone call.
 
-**Not in v1:** our own basket or checkout, payments, user accounts, a CMS. (A practice basket
-is a stretch goal at the bottom.)
+**After v1:** a **demo** basket and checkout that follow the Figma designs (`docs/02` to `docs/05`).
+It's clearly labelled as a demo: no real orders, no payments, no card fields.
 
-## Issues, in order
+**Not planned:** user accounts, a CMS, real payments.
 
-| Day | # | Issue | What you'll learn |
-|---|---|---|---|
-| Wed 11 | 1 | Project setup and first deploy | git, folder structure, GitHub Pages |
-| Wed 11 | 2 | Design foundations: wireframe and tokens | mobile-first thinking, CSS custom properties |
-| Thu 12 | 3 | Semantic HTML for the home page | landmarks, headings, accessible markup |
-| Thu 12 | 4 | Header and mobile navigation | flexbox, a JS toggle, `aria-expanded` |
-| Fri 13 | 5 | Style the home page | layout, hero, responsive images |
-| Fri 13 | 6 | Turn the menu into `menu.json` | data modelling, single source of truth |
-| Sat 14 | 7 | Render the menu from JSON | `fetch`, DOM building, templates |
-| Sat 14 | 8 | Sticky category bar with scroll-spy | `position: sticky`, IntersectionObserver |
-| Sun 15 | 9 | Menu search and filters | events, filtering arrays, debouncing |
-| Sun 15 | 10 | "Open now" badge | `Date`, edge cases (closing at midnight) |
-| Mon 16 | 11 | Ordering, delivery and contact | third-party embeds, `tel:` links, maps |
-| Tue 17 | 12 | Accessibility, performance and SEO pass | Lighthouse, contrast, JSON-LD |
-| Wed 18 | 13 | Launch: cross-device QA and README | testing checklist, writing docs |
+## Milestones
 
-**Stretch (after v1):** a practice basket stored in `localStorage`, which totals the order and
-applies the delivery minimums.
+Each milestone is a sprint. Each issue in it is one branch and one small PR.
 
-## How we'll work on each issue
+| # | Milestone | Due | Issues | What you'll learn |
+|---|---|---|---|---|
+| 1 | HTML done | Fri 27 Nov 2026 | #19–#28 (parent #3) | landmarks, headings, forms, tables, accessible markup |
+| 2 | Looks like the design | Fri 11 Dec 2026 | #29–#38 (parents #4, #5) | flexbox, grid, `position: sticky`, responsive layout |
+| 3 | Real menu data | Fri 8 Jan 2027 (includes a Christmas break) | #6, #7, #8 | JSON data modelling, `fetch`, DOM building, IntersectionObserver |
+| 4 | Launch | Fri 29 Jan 2027 | #9–#13 | events and filtering, `Date`, Lighthouse, cross-device QA |
+| 5 | Demo ordering | after launch, no date yet | #43–#53 (parent #14) | state management, `localStorage`, `<dialog>`, form validation |
 
-1. Create a branch: `git switch -c 7-render-menu`
-2. Build it in small commits.
-3. Open a pull request that says `Closes #7`.
-4. I review it like a senior engineer would, you fix what comes up, then merge.
+Issues #6–#13 are split into smaller ones just before we start them, so they reflect what we've
+learned by then.
+
+## Decisions so far
+
+- **The menu is the home page.** There's no separate `menu.html`.
+- **The Figma design is the source of truth** for content and layout.
+- **One flat £2.50 delivery fee.** The original site lists three zones but never says which
+  areas are in which, so zones can't help a customer.
+- **Prices are stored in pence**, in both the HTML (`<data value="1099">`) and the JSON.
+
+## How we work on each issue
+
+1. Start from an up-to-date `main`: `git switch main`, then `git pull`.
+2. Create a branch: `git switch -c 7-render-menu`
+3. Build it in small commits. Before each one: save, run the
+   [validator](https://validator.w3.org/nu/), then check `git diff --staged`.
+   Use the message format `Verb what changed (#7)`.
+4. Open a pull request that says `Closes #7`.
+5. Wait for the review, fix what comes up, then **Squash and merge**.

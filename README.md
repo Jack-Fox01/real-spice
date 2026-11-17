@@ -24,7 +24,7 @@ Plain HTML, CSS and JavaScript. No framework, no build step.
 > To order for real, visit **[realspiceleven.co.uk](https://www.realspiceleven.co.uk/)** or call **📞 01333 422533**.
  
 > [!NOTE]
-> The live site goes up once GitHub Pages is turned on in [#1](https://github.com/Jack-Fox01/real-spice/issues/1).
+> **Status:** the HTML for both pages is done. Styling to match the Figma designs is next.
  
 ---
  
@@ -64,8 +64,9 @@ The [current site](https://www.realspiceleven.co.uk/) works, but it's hard to us
 - [ ] 🔍 Search, plus vegetarian and spice-level filters
 - [ ] 🗺️ Clear delivery info (one flat fee), allergy info, a map and directions
 - [ ] 💯 Lighthouse scores of **90+** for performance, accessibility, best practices and SEO
+- [ ] 🧺 A **demo** basket and checkout from the Figma designs (no real orders or payments)
 
-Progress is tracked in the [**v1 launch milestone**](https://github.com/Jack-Fox01/real-spice/milestone/1).
+Progress is tracked in the [**milestones**](https://github.com/Jack-Fox01/real-spice/milestones): HTML done → Looks like the design → Real menu data → Launch → Demo ordering.
  
 ---
  
@@ -77,7 +78,9 @@ Progress is tracked in the [**v1 launch milestone**](https://github.com/Jack-Fox
 | **No Tailwind (for now)** | Tailwind is a shorthand for CSS. Learn the CSS first, then reconsider after v1. |
 | **Menu in `data/menu.json`** | One source of truth: change a price once and it updates everywhere. |
 | **Prices stored in pence** | Whole numbers avoid floating-point bugs (`0.1 + 0.2 !== 0.3`). |
-| **Keep the existing ordering system** | Payments need a backend, payment security compliance and a merchant account. This site improves browsing and hands off to the existing ordering system. |
+| **Real orders stay with the existing ordering system** | Payments need a backend, payment security compliance and a merchant account. The basket and checkout here are a clearly labelled demo, with no card fields. |
+| **One flat £2.50 delivery fee** | The original site lists three delivery zones but never says which areas are in which, so zones can't help a customer. |
+| **Semantic HTML first** | Landmarks, one `h1` per page, real `<button>`s and `<label>`s, so the pages work with a keyboard and a screen reader before any CSS. |
 | **GitHub Pages** | Free hosting that deploys on every push to `main`. |
  
 ---
@@ -113,16 +116,15 @@ cd real-spice
  
 ```text
 real-spice/
-├── index.html        # Home
-├── menu.html         # Full menu with search and filters
-├── contact.html      # Find us, delivery and allergy info
+├── index.html        # Home and menu: banner, search, filters, deal, dishes
+├── contact.html      # Find us, hours, delivery, allergy info, about
 ├── css/
-│   └── styles.css    # Design tokens and styles
-├── js/               # Nav, menu, opening hours
-├── data/
-│   └── menu.json     # The menu: the single source of truth
-├── images/           # Optimised WebP images
-└── docs/             # Research, plan and wireframes
+│   └── styles.css    # Reset, design tokens and styles
+├── js/               # Coming soon: menu, filters, open now, basket
+├── data/             # Coming soon: menu.json, the single source of truth
+├── images/
+│   └── dish-placeholder.svg   # Shown until real dish photos arrive
+└── docs/             # Research, plan and Figma designs
 ```
  
 ---
