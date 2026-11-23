@@ -80,6 +80,7 @@ h3 {
     --radius-pill: 999px;
     --card-shadow: 0 4px 16px rgba(51, 26, 13, 0.06);
     --tap-target: 2.75rem;
+    --header-height: calc(var(--tap-target) + var(--page-padding) * 2); /* top bar: link height plus padding top and bottom */
     --page-padding: var(--space-4);
     --max-width: 72rem;
 }
@@ -118,6 +119,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: var(--page-padding);
+    position: sticky;
+    top: 0;
+    background-color: var(--brand-primary);
+    z-index: 1;
 }
 
 nav[aria-label="site"] {
@@ -138,14 +143,22 @@ header a {
     align-items: center;
     min-height: var(--tap-target);
     padding-inline: var(--space-2);
+    color: var(--text-on-brand);
+    text-decoration: none;
 }
 
+/* only the current page is underlined and bold */
 header a[aria-current="page"] {
-    color: var(--brand-primary);
     font-weight: var(--font-weight-bold);
+    text-decoration: underline;
 }
 
 header a:focus-visible {
-    outline: 3px solid var(--brand-primary-dark);
+    outline: 3px solid var(--brand-accent);
     outline-offset: 3px;
+}
+
+/* jump links land below the sticky top bar, not behind it */
+[id] {
+    scroll-margin-top: var(--header-height);
 }
