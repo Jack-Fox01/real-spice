@@ -1,0 +1,8 @@
+<!-- Jaali pattern tile for the red banner: one diamond with a dot in the middle.
+     It repeats as a CSS background. White at 9% opacity, measured from docs/01-menu.png. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <g fill="none" stroke="#fff" stroke-opacity="0.09" stroke-width="1.5">
+        <path d="M14 4 L24 14 L14 24 L4 14 Z"/>
+    </g>
+    <circle cx="14" cy="14" r="2" fill="#fff" fill-opacity="0.09"/>
+</svg>
