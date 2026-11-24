@@ -162,3 +162,17 @@ header a:focus-visible {
 [id] {
     scroll-margin-top: var(--header-height);
 }
+ 
+.hero {
+    background-color: var(--brand-primary);
+    color: var(--text-on-brand);
+    padding-inline: 1rem;
+    padding-block: var(--space-4);
+    border-radius: 0, 0, var(--radius-card);
+}
+
+
+p.tagline {
+    font-size: var(--font-size-tag);
+}
+
