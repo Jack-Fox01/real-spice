@@ -162,3 +162,22 @@ header a:focus-visible {
 [id] {
     scroll-margin-top: var(--header-height);
 }
+ 
+.hero {
+    background-color: var(--brand-primary);
+    background-image: url("../images/jaali.svg"); /* faint diamond pattern, tiles on top of the red */
+    color: var(--text-on-brand);
+    padding-inline: var(--page-padding);
+    padding-block: var(--space-4);
+    border-radius: 0 0 var(--radius-card) var(--radius-card);
+}
+
+
+p.tagline {
+    font-size: var(--font-size-small);
+}
+
+span.hero-span {
+    color: var(--brand-accent);
+}
+
