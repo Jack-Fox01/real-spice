@@ -51,6 +51,7 @@ h3 {
     --status-hot-bg: #ffe9e6;
     --ui-disabled: #D8C9C0;
     --brand-deal: #6E1712;
+    --chip-bg: rgba(255, 255, 255, 0.15);
     
     /* TYPOGRAPHY */
 
@@ -181,3 +182,37 @@ span.hero-span {
     color: var(--brand-accent);
 }
 
+/* name and tagline on the left, open status pill on the right */
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+/* INFO CHIPS */
+.info-chip {
+    background-color: var(--chip-bg);
+    border-radius: var(--radius-pill);
+    padding-block: var(--space-2);
+    padding-inline: var(--space-3);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+}
+
+.info-chips {
+    display: flex;
+    gap: var(--space-1);
+    flex-wrap: wrap;
+    margin-block-start: var(--space-2);
+}
+
+#open-status {
+    color: var(--status-green);
+    background-color: var(--status-green-bg);
+    border-radius: var(--radius-pill);
+    padding-block: var(--space-2);
+    padding-inline: var(--space-2);
+    font-weight: var(--font-weight-bold);
+    white-space: nowrap;
+}
