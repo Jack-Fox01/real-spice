@@ -181,8 +181,22 @@ span.hero-span {
     color: var(--brand-accent);
 }
 
+/* INFO CHIPS */
 .info-chip {
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: var(--radius-pill);
+    padding-block: var(--space-2);
+    padding-inline: var(--space-2);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
 }
 
+.info-chips {
+    display: flex;
+    gap: var(--space-1);
+    flex-wrap: wrap;
+}
+
+#open-status {
+    color: var(--status-green-bg);
+}
