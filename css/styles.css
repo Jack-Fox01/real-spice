@@ -216,3 +216,45 @@ span.hero-span {
     font-weight: var(--font-weight-bold);
     white-space: nowrap;
 }
+
+/* buttons */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--tap-target);
+    padding-inline: var(--space-5);
+    border-radius: var(--radius-pill);
+    background-color: var(--bg-card);
+    color: var(--brand-primary);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    font-style: normal;
+}
+
+.btn-secondary {
+    background-color: var(--brand-primary-dark);
+    color: var(--text-on-brand);
+}
+
+.btn:hover {
+    background-color: var(--bg-cream);
+}
+
+.btn-secondary:hover {
+    background-color: var(--brand-primary);
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--brand-accent);
+    outline-offset: 3px;
+}
+
+.btn-secondary:focus-visible {
+    outline-color: var(--brand-primary-dark);
+}
+
+.hero .btn {
+    margin-block-start: var(--space-4);
+}
