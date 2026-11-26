@@ -52,6 +52,7 @@ h3 {
     --ui-disabled: #D8C9C0;
     --brand-deal: #6E1712;
     --chip-bg: rgba(255, 255, 255, 0.15);
+    --pill-border: rgba(255, 255, 255, 0.5);
     
     /* TYPOGRAPHY */
 
@@ -84,6 +85,18 @@ h3 {
     --header-height: calc(var(--tap-target) + var(--page-padding) * 2); /* top bar: link height plus padding top and bottom */
     --page-padding: var(--space-4);
     --max-width: 72rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
 body {
@@ -257,4 +270,52 @@ span.hero-span {
 
 .hero .btn {
     margin-block-start: var(--space-4);
+}
+
+.hero search {
+    margin-block-start: var(--space-4);
+}
+
+.hero fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    margin-block-start: var(--space-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.filter-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap-target);
+    padding-inline: var(--space-4);
+    border: 2px solid var(--pill-border);
+    border-radius: var(--radius-pill);
+    color: var(--text-on-brand);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+}
+
+.filter-pill:has(input:checked) {
+    background-color: var(--bg-card);
+    color: var(--brand-primary);
+    border-color: var(--bg-card);
+}
+
+.filter-pill:has(input:focus-visible) {
+    outline: 3px solid var(--brand-accent);
+    outline-offset: 3px;
+}
+
+#dish-search {
+    width: 100%;
+    min-height: var(--tap-target);
+    padding-inline: var(--space-4);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-input);
+    font-size: var(--font-size-body);
 }
